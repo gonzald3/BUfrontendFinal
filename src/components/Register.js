@@ -79,10 +79,7 @@ const Register = () => {
             history("/login")
         }else{
             console.log("error")
-        }
-        
-
-        
+        }       
 
     };
 
