@@ -50,7 +50,7 @@ const Home = () => {
 
 
     const getUserData = async () => {
-        const res = await axios.get("/getdata", {
+        const res = await axios.get("https://arcane-plateau-71865.herokuapp.com/getdata", {
             headers: {
                 "Content-Type": "application/json"
             }
