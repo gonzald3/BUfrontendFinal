@@ -74,7 +74,7 @@ const Register = () => {
 
         const formData = createFormData({ userUuid, email, password, fullname });
 
-        const res = await axios.post("/register",formData,config);
+        const res = await axios.post("https://arcane-plateau-71865.herokuapp.com/register",formData,config);
         if(res.data.status == 201){
             history("/login")
         }else{
