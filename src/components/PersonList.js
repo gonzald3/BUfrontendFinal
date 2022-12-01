@@ -30,7 +30,7 @@ export default class PersonList extends React.Component {
 
   //Must return this functional component in Home.js
   dltUser = (id, e) => {
-    axios.delete(`/${id}`)
+    axios.delete(`https://arcane-plateau-71865.herokuapp.com/${id}`)
     .then(res => {
         console.log(res);
         const persons = this.state.persons;
