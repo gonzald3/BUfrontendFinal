@@ -48,8 +48,8 @@ const Login = (props) => {
         
         if (isUserCredentialsValid(email, passkey)) {
             const authenticatedUser = await signin(email.toLowerCase(), passkey);
-            console.log(authenticatedUser.data)
-            if (authenticatedUser.data.email === email) {
+            //console.log(authenticatedUser.data)
+            if (authenticatedUser.data.email.toLowerCase() === email.toLowerCase()) {
                 localStorage.setItem('auth', JSON.stringify(authenticatedUser.data));
                 setUser(authenticatedUser.data);
                 history("/profile");
