@@ -47,7 +47,7 @@ const Login = (props) => {
         const { email, passkey } = getInputs();
         
         if (isUserCredentialsValid(email, passkey)) {
-            const authenticatedUser = await signin(email, passkey);
+            const authenticatedUser = await signin(email.toLowerCase(), passkey);
             console.log(authenticatedUser.data)
             if (authenticatedUser.data.email === email) {
                 localStorage.setItem('auth', JSON.stringify(authenticatedUser.data));
