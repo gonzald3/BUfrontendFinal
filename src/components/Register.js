@@ -56,7 +56,7 @@ const Register = () => {
     const createFormData = ({ userUuid, email, password, fullname }) => {
         const formData = new FormData();
         formData.append('id', userUuid);
-        formData.append("photo",file)
+        formData.append("image",file)
         formData.append("fname",fullname);
         formData.append("email",email);
         formData.append("passkey",password);
@@ -74,7 +74,7 @@ const Register = () => {
 
         const formData = createFormData({ userUuid, email, password, fullname });
 
-        const res = await axios.post("https://arcane-plateau-71865.herokuapp.com/register",formData,config);
+        const res = await axios.post("https://bubackendfinal-production.up.railway.app/register",formData,config);
         if(res.data.status == 201){
             history("/login")
         }else{

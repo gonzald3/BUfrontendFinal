@@ -41,7 +41,7 @@ const Profile = (props) => {
                 <h1>{data.username}</h1>
                 <div>
                   <div>
-                  {data.username && <Card.Img variant="top" src={`/uploads/${data.userimg}`} style={{ width: '100px', textAlign: "center", margin: "auto" }} className="mt-2" />
+                  {data.username && <Card.Img variant="top" src={data.userimg} style={{ width: '100px', textAlign: "center", margin: "auto" }} className="mt-2" />
                   
                   }
                     

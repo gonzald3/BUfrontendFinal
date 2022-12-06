@@ -37,7 +37,7 @@ const Login = (props) => {
   
     const signin = async (email, passkey) => {
       //const url = 'http://localhost:7840/login';
-      const url = 'https://arcane-plateau-71865.herokuapp.com/login';
+      const url = 'https://bubackendfinal-production.up.railway.app/login';
       return await axios.post(url, { email, passkey });
     }
 
@@ -49,7 +49,7 @@ const Login = (props) => {
         if (isUserCredentialsValid(email, passkey)) {
             const authenticatedUser = await signin(email, passkey);
             console.log(authenticatedUser.data)
-            if (authenticatedUser.data.email == email) {
+            if (authenticatedUser.data.email === email) {
                 localStorage.setItem('auth', JSON.stringify(authenticatedUser.data));
                 setUser(authenticatedUser.data);
                 history("/profile");

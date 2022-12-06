@@ -9,6 +9,7 @@ import {Routes,Route} from "react-router-dom";
 import { useState, useEffect } from 'react';
 import Context from './context';
 
+
 function App() {
 
   const [user, setUser] = useState(null);
